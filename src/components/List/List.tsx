@@ -1,13 +1,17 @@
-const List = () => {
-	return (
-		<ul>
-			<li>Hello</li>
-			<li>from</li>
-			<li>the</li>
-			<li>other</li>
-			<li>side</li>
-		</ul>
-	);
+import "./List.scss";
+
+type ListProps = {
+  items: string[];
+};
+
+const List = ({ items }: ListProps) => {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default List;
